@@ -24,3 +24,15 @@ def guess_number(low, high, num_attempts):
     :param num_attempts: The number of attempts the user is given to guess the correct number.
     :returns: True if the user answers any attempt correctly, False otherwise.
     """
+    import random
+    number = random.randint(low,high)
+    print(f"The maximum number is {high}, the minimum number if {low}.")
+    for i in range(num_attempts):
+        print(f"You've tried {i} times.")
+        guess = input("Please input your guess")
+        if guess == str(number):
+            return True
+    return False
+
+
+
